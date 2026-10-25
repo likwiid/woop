@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat
 import com.likwiid.woop.MainActivity
 import com.likwiid.woop.R
 import com.likwiid.woop.data.GoalWithDetails
+import com.likwiid.woop.data.PlanText
 import com.likwiid.woop.data.PromptEntity
 
 object Notifications {
@@ -64,7 +65,7 @@ object Notifications {
         val plan = details.firstPlan
         // Rehearsing the if-then in the notification itself keeps the cue fresh.
         val text = if (plan != null) {
-            "If ${plan.ifCue.trim().trimEnd('.')}, then I will ${plan.thenAction.trim().trimEnd('.')}."
+            PlanText.sentence(plan.ifCue, plan.thenAction)
         } else {
             "How is it going? A check-in takes about a minute."
         }

@@ -35,6 +35,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.likwiid.woop.data.Momentum
+import com.likwiid.woop.data.PlanText
 import com.likwiid.woop.data.PlanUse
 import com.likwiid.woop.reminders.Schedule
 import com.likwiid.woop.ui.appViewModel
@@ -142,7 +143,7 @@ private fun PlanUseStep(state: ReviewState, vm: ReviewViewModel, onClose: () -> 
     ReviewScaffold(state, vm, onClose) {
         StepHeader(step = WoopStep.PLAN, title = "Since last time, did the obstacle show up?")
         Spacer(Modifier.height(16.dp))
-        state.details?.firstPlan?.let { ContextNote(WoopStep.PLAN, "If ${it.ifCue}, then I will ${it.thenAction}.", label = "Your plan") }
+        state.details?.firstPlan?.let { ContextNote(WoopStep.PLAN, PlanText.sentence(it.ifCue, it.thenAction), label = "Your plan") }
         Spacer(Modifier.height(20.dp))
         Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
             listOf(

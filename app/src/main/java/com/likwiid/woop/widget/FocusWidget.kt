@@ -45,6 +45,7 @@ import com.likwiid.woop.MainActivity
 import com.likwiid.woop.WoopApp
 import com.likwiid.woop.data.GoalStatus
 import com.likwiid.woop.data.GoalWithDetails
+import com.likwiid.woop.data.PlanText
 import com.likwiid.woop.reminders.Notifications
 import com.likwiid.woop.reminders.ReminderScheduler
 import com.likwiid.woop.ui.theme.DarkPalette
@@ -186,12 +187,12 @@ private fun Focus(details: GoalWithDetails, scheduler: ReminderScheduler) {
                 // Read as one sentence, the way it is rehearsed: the cue, then the response in bold.
                 Column(GlanceModifier.defaultWeight()) {
                     Text(
-                        "If ${plan.ifCue.trim().trimEnd('.', ',')},",
+                        PlanText.ifPart(plan.ifCue),
                         style = TextStyle(color = onPlanContainer, fontSize = widgetSp(planSize)),
                         maxLines = cueLines,
                     )
                     Text(
-                        "then I will ${plan.thenAction.trim().trimEnd('.')}.",
+                        PlanText.thenPart(plan.thenAction),
                         style = TextStyle(color = onPlanContainer, fontSize = widgetSp(planSize), fontWeight = FontWeight.Bold),
                         maxLines = lines - cueLines,
                     )
