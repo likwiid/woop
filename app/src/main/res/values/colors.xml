@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="woop_background">#F7F5F1</color>
+    <color name="woop_icon_background">#F7F5F1</color>
+    <color name="woop_wish">#4B44D0</color>
+    <color name="woop_outcome">#E3A33A</color>
+    <color name="woop_obstacle">#D9653F</color>
+    <color name="woop_plan">#169A78</color>
+    <!-- Widget picker preview only; the live widget takes its colours from the Compose theme. -->
+    <color name="widget_surface">#FFFFFF</color>
+    <color name="widget_on_surface">#1D1B19</color>
+    <color name="widget_plan_container">#DCF4EA</color>
+    <color name="widget_on_plan">#064A39</color>
+</resources>

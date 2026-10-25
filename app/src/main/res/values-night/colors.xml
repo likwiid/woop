@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="woop_background">#131315</color>
+    <color name="widget_surface">#1B1B1E</color>
+    <color name="widget_on_surface">#E6E2DD</color>
+    <color name="widget_plan_container">#10392E</color>
+    <color name="widget_on_plan">#C9F2E3</color>
+</resources>

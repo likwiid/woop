@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WOOP</string>
+    <string name="widget_label">Focus plan</string>
+    <string name="widget_description">Your focus goal\'s if-then plan, where you\'ll see it all day</string>
+</resources>
